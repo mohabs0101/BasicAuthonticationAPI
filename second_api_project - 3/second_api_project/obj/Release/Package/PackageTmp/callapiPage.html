@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!--<script src="Scripts/jquery-3.4.1.js"></script>-->
+    <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var ularchive = $('#ulArchive');
+
+
+            $('#btn').click(function () {
+                $.ajax({
+                    type: 'GET',
+                    //we can decide what data to recive there is where query written in the api function all we need is send parameter we want
+                    //url: "https://localhost:44328/api/archive/?papertype=origion",this will return only origintype 
+
+                    url: "https://localhost:44328/api/archive/",//will retrive all table
+                    /* url: 'api/archive',*/
+                    //dataType: 'jsonp',
+                    dataType: 'json',
+
+                    success: function (data) {//recive json data from api method
+                        ularchive.empty();
+                        $.each(data, function (index, val) {//for loop on all rows of data
+                            var sub_and_bknumber = val.Subject + ' ' + val.BookNumber; //select columns
+                            ularchive.append('<li>' + sub_and_bknumber + '</li>');//append to list or table 
+
+                        });
+
+                    }
+
+
+
+                });
+
+
+
+
+            });
+
+            $('#clearbtn').click(function () {
+                ularchive.empty();
+            });
+
+
+        });
+
+    </script>
+
+</head>
+<body>
+
+    <input id="btn" type="button" value="get all archive" />
+    <input id="clearbtn" type="button" value="Clear" />
+    <ul id="ulArchive" />
+
+
+
+
+
+</body>
+</html>

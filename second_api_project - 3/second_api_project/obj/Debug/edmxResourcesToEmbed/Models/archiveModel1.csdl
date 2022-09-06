@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ArchiveSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ArchiveBooks_TBL">
+    <Key>
+      <PropertyRef Name="ArchiveBookID" />
+    </Key>
+    <Property Name="ArchiveBookID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BookCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BookNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BookDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InboundNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InboundDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Subject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BooksTypeID" Type="Int32" />
+    <Property Name="From" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="To" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BookPriority" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ArchivedDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BookPaperType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentID_archivedBy" Type="Int32" />
+    <Property Name="UserID_archivedBy" Type="Int32" />
+    <Property Name="BookStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Privacy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SearchKeys" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="ArchiveSystemEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ArchiveBooks_TBL" EntityType="Self.ArchiveBooks_TBL" />
+  </EntityContainer>
+</Schema>

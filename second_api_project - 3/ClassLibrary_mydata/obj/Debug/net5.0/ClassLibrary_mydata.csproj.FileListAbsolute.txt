@@ -1,0 +1,12 @@
+C:\Users\mohab.MOHAMMED\Desktop\Developing\API\second_api_project\ClassLibrary_mydata\bin\Debug\net5.0\ClassLibrary_mydata.deps.json
+C:\Users\mohab.MOHAMMED\Desktop\Developing\API\second_api_project\ClassLibrary_mydata\bin\Debug\net5.0\ClassLibrary_mydata.dll
+C:\Users\mohab.MOHAMMED\Desktop\Developing\API\second_api_project\ClassLibrary_mydata\bin\Debug\net5.0\ClassLibrary_mydata.pdb
+C:\Users\mohab.MOHAMMED\Desktop\Developing\API\second_api_project\ClassLibrary_mydata\obj\Debug\net5.0\ClassLibrary_mydata.csproj.AssemblyReference.cache
+C:\Users\mohab.MOHAMMED\Desktop\Developing\API\second_api_project\ClassLibrary_mydata\obj\Debug\net5.0\ClassLibrary_mydata.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mohab.MOHAMMED\Desktop\Developing\API\second_api_project\ClassLibrary_mydata\obj\Debug\net5.0\ClassLibrary_mydata.AssemblyInfoInputs.cache
+C:\Users\mohab.MOHAMMED\Desktop\Developing\API\second_api_project\ClassLibrary_mydata\obj\Debug\net5.0\ClassLibrary_mydata.AssemblyInfo.cs
+C:\Users\mohab.MOHAMMED\Desktop\Developing\API\second_api_project\ClassLibrary_mydata\obj\Debug\net5.0\ClassLibrary_mydata.csproj.CoreCompileInputs.cache
+C:\Users\mohab.MOHAMMED\Desktop\Developing\API\second_api_project\ClassLibrary_mydata\obj\Debug\net5.0\ClassLibrary_mydata.dll
+C:\Users\mohab.MOHAMMED\Desktop\Developing\API\second_api_project\ClassLibrary_mydata\obj\Debug\net5.0\refint\ClassLibrary_mydata.dll
+C:\Users\mohab.MOHAMMED\Desktop\Developing\API\second_api_project\ClassLibrary_mydata\obj\Debug\net5.0\ClassLibrary_mydata.pdb
+C:\Users\mohab.MOHAMMED\Desktop\Developing\API\second_api_project\ClassLibrary_mydata\obj\Debug\net5.0\ref\ClassLibrary_mydata.dll

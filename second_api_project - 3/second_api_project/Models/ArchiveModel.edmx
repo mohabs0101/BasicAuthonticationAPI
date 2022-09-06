@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ArchiveSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ArchiveBooks_TBL">
+          <Key>
+            <PropertyRef Name="ArchiveBookID" />
+          </Key>
+          <Property Name="ArchiveBookID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BookCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="BookNumber" Type="nvarchar" MaxLength="255" />
+          <Property Name="BookDate" Type="nvarchar" MaxLength="255" />
+          <Property Name="InboundNumber" Type="nvarchar" MaxLength="255" />
+          <Property Name="InboundDate" Type="nvarchar" MaxLength="255" />
+          <Property Name="Subject" Type="nvarchar" MaxLength="255" />
+          <Property Name="BooksTypeID" Type="int" />
+          <Property Name="From" Type="nvarchar" MaxLength="255" />
+          <Property Name="To" Type="nvarchar" MaxLength="255" />
+          <Property Name="SearchKeys" Type="nvarchar(max)" />
+          <Property Name="BookPriority" Type="nvarchar" MaxLength="255" />
+          <Property Name="ArchivedDate" Type="date" />
+          <Property Name="BookPaperType" Type="nvarchar" MaxLength="255" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="DepartmentID_archivedBy" Type="int" />
+          <Property Name="UserID_archivedBy" Type="int" />
+          <Property Name="BookStatus" Type="nvarchar" MaxLength="255" />
+          <Property Name="Privacy" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Users_TBL">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+          <Property Name="DepartmentID" Type="int" />
+          <Property Name="PermitionTypeID" Type="int" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="ArchiveSystemModelStoreContainer">
+          <EntitySet Name="ArchiveBooks_TBL" EntityType="Self.ArchiveBooks_TBL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users_TBL" EntityType="Self.Users_TBL" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ArchiveSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ArchiveBooks_TBL">
+          <Key>
+            <PropertyRef Name="ArchiveBookID" />
+          </Key>
+          <Property Name="ArchiveBookID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BookCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="BookNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="BookDate" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="InboundNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="InboundDate" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Subject" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="BooksTypeID" Type="Int32" />
+          <Property Name="From" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="To" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SearchKeys" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BookPriority" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ArchivedDate" Type="DateTime" Precision="0" />
+          <Property Name="BookPaperType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DepartmentID_archivedBy" Type="Int32" />
+          <Property Name="UserID_archivedBy" Type="Int32" />
+          <Property Name="BookStatus" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Privacy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Users_TBL">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DepartmentID" Type="Int32" />
+          <Property Name="PermitionTypeID" Type="Int32" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="ArchiveSystemEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ArchiveBooks_TBL" EntityType="Self.ArchiveBooks_TBL" />
+          <EntitySet Name="Users_TBL" EntityType="Self.Users_TBL" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ArchiveSystemModelStoreContainer" CdmEntityContainer="ArchiveSystemEntities1">
+          <EntitySetMapping Name="ArchiveBooks_TBL">
+            <EntityTypeMapping TypeName="ArchiveSystemModel.ArchiveBooks_TBL">
+              <MappingFragment StoreEntitySet="ArchiveBooks_TBL">
+                <ScalarProperty Name="ArchiveBookID" ColumnName="ArchiveBookID" />
+                <ScalarProperty Name="BookCode" ColumnName="BookCode" />
+                <ScalarProperty Name="BookNumber" ColumnName="BookNumber" />
+                <ScalarProperty Name="BookDate" ColumnName="BookDate" />
+                <ScalarProperty Name="InboundNumber" ColumnName="InboundNumber" />
+                <ScalarProperty Name="InboundDate" ColumnName="InboundDate" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="BooksTypeID" ColumnName="BooksTypeID" />
+                <ScalarProperty Name="From" ColumnName="From" />
+                <ScalarProperty Name="To" ColumnName="To" />
+                <ScalarProperty Name="SearchKeys" ColumnName="SearchKeys" />
+                <ScalarProperty Name="BookPriority" ColumnName="BookPriority" />
+                <ScalarProperty Name="ArchivedDate" ColumnName="ArchivedDate" />
+                <ScalarProperty Name="BookPaperType" ColumnName="BookPaperType" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="DepartmentID_archivedBy" ColumnName="DepartmentID_archivedBy" />
+                <ScalarProperty Name="UserID_archivedBy" ColumnName="UserID_archivedBy" />
+                <ScalarProperty Name="BookStatus" ColumnName="BookStatus" />
+                <ScalarProperty Name="Privacy" ColumnName="Privacy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users_TBL">
+            <EntityTypeMapping TypeName="ArchiveSystemModel.Users_TBL">
+              <MappingFragment StoreEntitySet="Users_TBL">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+                <ScalarProperty Name="PermitionTypeID" ColumnName="PermitionTypeID" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

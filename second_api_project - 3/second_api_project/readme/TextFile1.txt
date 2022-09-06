@@ -1,0 +1,10 @@
+﻿this is api and client app 
+client project contain html page that consume api 
+i have ado connecting to archive system two tables users and archive books
+also contain basic http authontication 
+this is http not https 
+all i do in this project send encoded user name and password  the basic authentication class seethe header and convert it to base64 (decode)
+
+and send the user name and password to archivesecurity class there is function check with database and send thred user to controller to retrive 
+data as authorazation expected in code
+-u can send username andpassword using post man or AJAX in html 

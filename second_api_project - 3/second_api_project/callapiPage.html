@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!--<script src="Scripts/jquery-3.4.1.js"></script>-->
+    <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var ularchive = $('#ulArchive');
+
+
+            $('#btn').click(function () {
+                var username = $('#txtusername').val();
+                var password = $('#txtpassword').val();
+
+                $.ajax({
+
+                    type: 'GET',
+                    //we can decide what data to recive there is where query written in the api function all we need is send parameter we want
+                    //url: "https://localhost:44328/api/archive/?papertype=origion",this will return only origintype
+                    url: "api/archive/",//this will return all
+
+
+                    //we use this if page in same project of api
+                    /*    url: 'api/archive',*/
+                    /* dataType: 'jsonp',*/
+                    dataType: 'json',
+                    //specify the authorazation header
+                    headers: {
+                        //btoa function that convert string to based64
+                        'Authorization': 'Basic ' + btoa(username + ':' + password)
+                    },
+                    success: function (data) {//recive json data from api method
+                        ularchive.empty();
+                        $.each(data, function (index, val) {//for loop on all rows of data
+                            var sub_and_bknumber = val.Subject + ' ' + val.BookNumber; //select columns
+                            ularchive.append('<li>' + sub_and_bknumber + '(' + val.BookPaperType + ')' + '</li>');//append to list or table
+
+                        });
+
+                    },
+                    //jquery xml http requerst
+                    complete: function (jqxhr) {
+                        if (jqxhr.status == '401') {
+                            ularchive.empty();
+                            ularchive.append('<li style="color:red">' + jqxhr.status + ' : ' + jqxhr.statusText + '</li>')
+                        }
+                    }
+                })
+            });
+
+
+
+
+
+        });
+
+        $('#clearbtn').click(function () {
+            ularchive.empty();
+
+        });
+
+
+
+
+    </script>
+
+</head>
+<body>
+    <h1>api page</h1>
+    username:<input type="text" id="txtusername" />
+    password:<input type="password" id="txtpassword" />
+    <br /> <br />
+    <input id="btn" type="button" value="authonticate and get archive" />
+    <!--<input id="btn" type="button" value="get all archive" />-->
+    <input id="clearbtn" type="button" value="Clear" />
+    <ul id="ulArchive" />
+
+
+
+
+
+</body>
+</html>

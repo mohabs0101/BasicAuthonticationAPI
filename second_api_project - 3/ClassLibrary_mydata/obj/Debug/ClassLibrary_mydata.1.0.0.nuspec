@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ClassLibrary_mydata</id>
+    <version>1.0.0</version>
+    <authors>ClassLibrary_mydata</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net5.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\mohab.MOHAMMED\Desktop\Developing\API\second_api_project\ClassLibrary_mydata\bin\Debug\net5.0\ClassLibrary_mydata.dll" target="lib\net5.0\ClassLibrary_mydata.dll" />
+  </files>
+</package>

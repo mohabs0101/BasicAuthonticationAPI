@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ArchiveSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ArchiveBooks_TBL">
+    <Key>
+      <PropertyRef Name="ArchiveBookID" />
+    </Key>
+    <Property Name="ArchiveBookID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BookCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="BookNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="BookDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="InboundNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="InboundDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="50" />
+    <Property Name="BooksTypeID" Type="int" />
+    <Property Name="From" Type="nvarchar" MaxLength="50" />
+    <Property Name="To" Type="nvarchar" MaxLength="50" />
+    <Property Name="BookPriority" Type="nvarchar" MaxLength="50" />
+    <Property Name="ArchivedDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="BookPaperType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="50" />
+    <Property Name="DepartmentID_archivedBy" Type="int" />
+    <Property Name="UserID_archivedBy" Type="int" />
+    <Property Name="BookStatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="Privacy" Type="nvarchar" MaxLength="50" />
+    <Property Name="SearchKeys" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="ArchiveSystemModelStoreContainer">
+    <EntitySet Name="ArchiveBooks_TBL" EntityType="Self.ArchiveBooks_TBL" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
